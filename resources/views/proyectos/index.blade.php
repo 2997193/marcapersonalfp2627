@@ -1,8 +1,10 @@
 <x-layout titulo="Listado de proyectos">
+    <ul class="grid gap-4 sm:grid-cols-2">
     @forelse ($proyectos as $id => $proyecto)
-    <li>{{ $proyecto['nombre'] }}</li>
+    <li><x-tarjeta-proyecto :proyecto="$proyecto" :id="$id" /></li>
     @empty
         <li>Todavía no hay proyectos.</li>
     @endforelse
+    </ul>
 </x-layout>
 
