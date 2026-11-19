@@ -1,3 +1,7 @@
-<x-layout :id="$id">
-    <h1>Vista detalle proyecto {{ $id }}.</h1>
+<x-layout :titulo="'Vista desde proyecto' . $id">
+    @isset($proyecto)
+        <ul class="grid gap-4 sm:grid-cols-2">
+        <x-tarjeta-proyecto :proyecto="$proyecto" :id="$id" />
+        </ul>
+    @endisset
 </x-layout>
