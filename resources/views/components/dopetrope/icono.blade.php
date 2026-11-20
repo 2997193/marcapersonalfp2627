@@ -1,8 +1,3 @@
-{{--
-    Iconos de la plantilla Dopetrope (Font Awesome Free, licencia CC BY 4.0: https://fontawesome.com/license/free).
-    Uso: <x-dopetrope.icono nombre="engranaje" class="size-6" />
-    Los atributos que no son props (class, etc.) llegan en $attributes y se ponen en el <svg>.
---}}
 @props(['nombre'])
 
 @php

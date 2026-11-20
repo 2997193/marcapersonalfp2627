@@ -1,3 +1,3 @@
-<x-layout>
-    <h1>Añadir proyecto</h1>
+<x-layout titulo="Añadir proyecto">
+    <p>Añadir proyecto</p>
 </x-layout>

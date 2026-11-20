@@ -10,8 +10,8 @@
         'Dolore nisl feugiat',
     ];
     $blog = [
-        'Titulo 1 blog',
-        'Titulo 2 blog',
+        'Magna tempus consequat',
+        'Aptent veroeros aliquam',
     ];
 @endphp
 
@@ -45,22 +45,26 @@
         {{-- Blog --}}
         <x-dopetrope.seccion titulo="The Blog">
             <div class="grid gap-12 lg:grid-cols-2">
-                @foreach ($blog as $titular)
-                    <x-dopetrope.box :titulo="$titular" subtitulo="Posted 45 minutes ago" :imagen="'https://picsum.photos/seed/dopetrope-' . $loop->iteration . '/800/450'">
+                @foreach ($blog as $titulo)
+                <x-dopetrope.box :titulo="$titulo" imagen="https://picsum.photos/seed/dopetrope-1/800/450" subtitulo="Posted 45 minutes ago">
+                <x-slot:footer>
+                    <x-dopetrope.boton>
+                        <x-dopetrope.icono nombre="documento" class="size-4" />Continue Reading
+                    </x-dopetrope.boton>
 
-                        <x-slot:footer>
-                            <li>
-                                <x-dopetrope.boton>
-                                    <x-dopetrope.icono nombre="documento" class="size-4" /> Continue Reading
-                                </x-dopetrope.boton>
-                                <x-dopetrope.boton alt>
-                                    <x-dopetrope.icono nombre="comentario" class="size-4" /> 33 Comments
-                                </x-dopetrope.boton>
-                            </li>
-                        </x-slot:footer>
-                    </x-dopetrope.box>
+                    <x-dopetrope.boton  alt>
+                        <x-dopetrope.icono nombre="comentario" class="size-4"/> 33 comments
+                    </x-dopetrope.boton>                    
+                    
+                </x-slot:footer>
+                </x-dopetrope.box>
+
+     
                 @endforeach
+                        
             </div>
         </x-dopetrope.seccion>
+
+
     </div>
 </main>
